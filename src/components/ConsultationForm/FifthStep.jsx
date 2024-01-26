@@ -65,7 +65,7 @@ const FifthStep = () => {
       <form className="flex flex-col gap-4 w-full max-w-screen-sm flex-wrap" onSubmit={(e) => handleSubmit(e)}>
                 <div className='text-white text-center text-lg font-semibold mb-4'>Select your Doctor</div>
 
-        <div className='flex flex-row gap-2 justify-between items-center'>
+        <div className='flex flex-col md:flex-row gap-2 justify-between items-center'>
 
         {
            filteredCity.map((data) => 
