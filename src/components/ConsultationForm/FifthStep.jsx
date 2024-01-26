@@ -84,7 +84,10 @@ const FifthStep = () => {
 	    </form>
     )
     :
-    <div className='text-white font-semibold'> No Doctors Available</div>
+    <>
+    <div className='text-white font-semibold'> No Doctors Available in your City</div>
+    <button onClick={()=>dispatch(setStep(step-1))} className='text-white mt-3 border hover:scale-110 hover:delay-400 hover:bg-richblue-900 border-newColor-1 px-4 rounded-md p-2'>Previous</button>
+    </>
     }
 
     </div>
