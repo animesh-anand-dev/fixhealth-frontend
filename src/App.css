@@ -1,38 +1,102 @@
-.App {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #afb2bf;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 3px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #000814;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #afb2bf;
+  border-radius: 10px;
+  visibility: hidden;
+}
+
+*:active::-webkit-scrollbar-thumb,
+*:focus::-webkit-scrollbar-thumb,
+*:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;  
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*truncate*/
+.product-title{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+input:checked + label {
+	border-color: #00ACC1;
+	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.tick {
+  stroke-dasharray: 29px;
+  stroke-dashoffset: 29px;
+  animation: draw .5s cubic-bezier(.25, .25, .25, 1) forwards;
+  animation-delay: .6s
+}
+
+.circle {
+  fill-opacity: 0;
+  stroke: #219a00;
+  stroke-width: 16px;
+  transform-origin: center;
+  transform: scale(0);
+  animation: grow 1s cubic-bezier(.25, .25, .25, 1.25) forwards;   
+}
+
+@keyframes grow {
+  60% {
+      transform: scale(.8);
+      stroke-width: 4px;
+      fill-opacity: 0;
+  }
+  100% {
+      transform: scale(.9);
+      stroke-width: 8px;
+      fill-opacity: 1;
+      fill: #219a00;
+  }
+}
+
+@keyframes draw {
+  100% { stroke-dashoffset: 0; }
+}
+
+.svg-container {
+  display: table-cell;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  vertical-align: middle;
 }
