@@ -34,7 +34,7 @@ const ConsultationForm = () => {
 
   return (
     <div className='flex flex-row items-center justify-center my-8' >
-        <div className='w-[16rem] h-[20rem] md:w-[40rem] md:h-max md:min-h-max md:max-h-max bg-newColor-1 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-10 border border-newColor-1   rounded-lg flex flex-col items-center p-4 hover:shadow-xl hover:transition-all hover:delay-500'>
+        <div className='w-[16rem] h-max min-h-max max-h-max md:w-[40rem] md:h-max md:min-h-max md:max-h-max bg-newColor-1 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-10 border border-newColor-1   rounded-lg flex flex-col items-center p-4 hover:shadow-xl hover:transition-all hover:delay-500'>
             
             <div className='text-white font-semibold text-xl'>
                 Book an Appointment
